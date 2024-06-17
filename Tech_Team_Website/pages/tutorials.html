@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="..\css\index.css">
+	 <link rel="stylesheet" href="..\css\tutorials.css">
+
+  <title>Tutorials</title>
+</head>
+<body>
+
+<! –– Nav Bar Starts Here  ––> 
+<div class="navbar">
+  <a href="..\index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="technology_news.html">Technology News</a>
+  <a href="tutorials.html">Tutorials</a>
+  <a href="product_reviews.html">Product Reviews</a>
+  <a href="forums.html">Forums</a>
+  <a href="events.html">Events</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy_policy.html">Privacy Policy</a>
+ 
+</div>
+<! –– Nav Bar Finishes Here  ––> 
+    <main>
+      <div class="main-text">
+        <div id="translator">
+          <div id="video-list">
+            <p>Tutorials</p> 
+            <select id="video-gallery" class="button11" onchange="changeVideo()">
+              <option value="tutorial.mp4">Tutorial 1</option>
+              <option value="..\media\tutorial2.mp4">Tutorial 2</option>
+              <option value="..\media\tutorial3.mp4">Tutorial 3</option>
+              <option value="..\media\tutorial4.mp4">Tutorial 4</option>
+            </select>
+          </div>
+          <div id="video-container">
+            <iframe id="player" class="videos-all" src="tutorial.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+  <script>
+    function changeVideo() {
+      var videoGallery = document.getElementById("video-gallery");
+      var player = document.getElementById("player");
+
+      // Получаем выбранное значение из выпадающего списка
+      var selectedVideo = videoGallery.value;
+
+      // Меняем источник видео в iframe
+      player.src = selectedVideo;
+    }
+  </script>
+</body>
+</html>
